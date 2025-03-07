@@ -1,0 +1,152 @@
+.dashboardPage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: white;
+
+  .texts {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 50px;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      opacity: 0.2;
+
+      img {
+        width: 64px;
+        height: 64px;
+      }
+
+      h1 {
+        font-size: 96px;
+        background: #2d3e50;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+    }
+
+    .options {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+
+      .option {
+        height: 130px;
+        width: 130px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-weight: 300;
+        font-size: 14px;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        align-items: center;
+        text-align: center;
+
+        img {
+          width: 40px;
+          height: 40px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .formContainer {
+    margin-top: auto;
+    width: 80%;
+    background-color: #ececec;
+    border-radius: 20px;
+    display: flex;
+
+    form {
+      width: 80vw;
+      max-width: 800px;
+      position: fixed;
+      left: 58%;
+      transform: translateX(-50%);
+      bottom: 40px;
+      background-color: #ececec;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0px 10px;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      margin: 0 20px;
+
+      input {
+        flex: 1;
+        padding: 20px 10px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: #2c2937;
+      }
+
+      button {
+        color: #2c2937;
+        border-radius: 50%;
+        background-color: #ececec;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        color: #ececec;
+        background-color: #dcdbdb;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .dashboardPage .formContainer form {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboardPage .formContainer form {
+    width: 60vw;
+    margin: 0 5vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboardPage .texts .options .option {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboardPage .formContainer form input {
+    padding: 15px 10px;
+  }
+
+  .dashboardPage .formContainer form button,
+  .dashboardPage .formContainer form label {
+    padding: 8px;
+  }
+}
+
+

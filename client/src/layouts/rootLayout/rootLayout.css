@@ -1,0 +1,40 @@
+.rootLayout {
+  padding: 16px 32px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.rootLayout header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+.rootLayout .logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  gap: 8px;
+}
+
+.rootLayout .logo img {
+  width: 96px;
+}
+
+.rootLayout .user-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.rootLayout .user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.rootLayout main {
+  flex: 1;
+}

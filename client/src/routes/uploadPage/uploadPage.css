@@ -1,0 +1,128 @@
+/* src/components/chatList.css */
+.uploadPage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  hr {
+    border: none;
+    height: 2px;
+    background-color: #000000;
+    opacity: 0.1;
+    border-radius: 5px;
+    margin: 20px 0px;
+  }
+
+  .upload-scroll-area {
+    flex: 1;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px;
+    box-sizing: content-box;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .link-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #2d3e50;
+    border-radius: 10px;
+    position: relative;
+    justify-content: space-between;
+    white-space: nowrap;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+
+    &:hover {
+      color: white;
+      background-color: #2d3e50;
+
+      .delete-button {
+        opacity: 1;
+      }
+
+      &::before {
+        left: -100%;
+      }
+
+      &::after {
+        right: -100%;
+      }
+    }
+  }
+
+  .upgrade {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .texts {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        &:first-child {
+          font-weight: 600;
+        }
+
+        &:last-child {
+          color: #888;
+        }
+      }
+    }
+  }
+
+  .upload-scroll-area::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .upload-scroll-area::-webkit-scrollbar-track {
+    background-color: #2d3e50;
+    border-radius: 6px;
+  }
+
+  .upload-scroll-area::-webkit-scrollbar-thumb {
+    background-color: #2d3e50;
+    border-radius: 6px;
+    border: 3px solid #f1f1f1;
+  }
+
+  .upload-scroll-area::-webkit-scrollbar-thumb:hover {
+    background-color: #2d3e50;
+  }
+
+  .upload-scroll-area {
+    scrollbar-width: thin;
+    scrollbar-color: #2d3e50 #f1f1f1;
+  }
+}
+
+.loading-spinner {
+  border: 8px solid #ececec;
+  border-top: 8px solid #888;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
